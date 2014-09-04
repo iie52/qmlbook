@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/spaceships">
+        <file>images/spaceships/green_storm.png</file>
+    </qresource>
+</RCC>
