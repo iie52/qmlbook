@@ -4,8 +4,6 @@ import QtQuick.Controls 1.1
 ApplicationWindow {
     visible: true
     id:root
-    width: 640
-    height: 480
     title: qsTr("Spaceships")
     menuBar: MenuBar {
         Menu {
@@ -35,6 +33,8 @@ ApplicationWindow {
          Image {
            id: rocket
            x: (parent.width-width)/2; y:40
+           width: recroc.width/3
+           height:root.height/3
            source:'qrc:/spaceships/images/spaceships/green_storm.png'
          }
 
