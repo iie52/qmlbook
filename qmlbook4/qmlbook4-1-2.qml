@@ -1,31 +1,31 @@
 import QtQuick 2.2
 Text {
         id: label
-
+ 
         x: 24; y: 24
-
-        // custom counter property for space presses
+ 
+        // обычный счётчик нажатия клавиши в нашем случае пробела
         property int spacePresses: 0
-
+ 
         text: "Space pressed: " + spacePresses + " times"
-
-        // (1) handler for text changes
+ 
+        // (1) обработчик изменения текста
         onTextChanged: console.log("text changed to:", text)
-
-        // need focus to receive key events
+ 
+        // нужен фокус для перехвата события нажатия клавиши
         focus: true
-
-        // (2) handler with some JS
+ 
+        // (2) обработчик с некоторым JavaScript
         Keys.onSpacePressed: {
             increment()
         }
-
-        // clear the text on escape
+ 
+        // очищаем текст по нажатию Escape
         Keys.onEscapePressed: {
             label.text = ''
         }
-
-        // (3) a JS function
+ 
+        // (3) Функция JavaScript
         function increment() {
             spacePresses = spacePresses + 1
         }
